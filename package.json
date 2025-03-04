@@ -9,7 +9,7 @@
     "dev:backend": "nodemon",
     "dev:thread": "nodemon --config nodemon.thread.json",
     "benchmark": "ts-node -r module-alias/register benchmark.ts",
-    "start": "npx pm2 start production.config.js --env production",
+    "start": "pm2 start production.config.js --env production",
     "start:thread": "pm2 start production.thread.config.js --env production",
     "start:frontend": "next start",
     "start:backend": "node dist/index.js --env production",
@@ -34,7 +34,6 @@
     "@db": "models"
   },
   "dependencies": {
-    "pm2": "^5.3.0",
     "@babel/generator": "^7.26.5",
     "@babel/parser": "^7.26.7",
     "@babel/traverse": "^7.26.7",
